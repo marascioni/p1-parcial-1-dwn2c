@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>
+      Programación I | Parcial 1 | APELLIDO, NOMBRE | APELLIDO, NOMBRE
+    </title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0,user-scalable=no"
+    />
+    <link rel="shortcut icon" href="./img/musica16.png" />    
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Programación I - Parcial 1</h1>
+      <h1>Saurrales, Carolina - Rascioni, Miguel</h1>
+    </header>
+    <main>
+      <div class="estadistica">
+        <div id="infoDiscos"></div>
+        <div id="infoPistas"></div>
+      </div>
+      <div class="botones">
+        <button onclick="Cargar();">Cargar nuevo disco</button>
+        <button onclick="Mostrar();">Mostrar discos</button>
+        <button onclick="BuscarCodigo();">Buscar por código</button>
+        <button onclick="Limpiar();">Limpiar pantalla</button>
+      </div>
+      <figure>
+        <img id="discoPortada" src="./img/foto_disco.jpg" alt="disco" />
+      </figure>
+      <div id="carga"></div>
+      <div id="info">
+        <div id="disco1" class="cajaMostrarDisco"></div>
+        <div id="disco2" class="cajaMostrarDisco"></div>
+        <div id="disco3" class="cajaMostrarDisco"></div>
+      </div>
+      <div class="flechas">
+        <img id="arrowL" src="./img/arrow-left.png" alt="Arrow Left" />
+        <img id="arrowR" src="./img/arrow-right.png" alt="Arrow Right" />             
+      </div> 
+    
+      <!-- Archivos con contenido de javascript -->
+      <script src="./javascript/pistasClass.js"></script>
+      <script src="./javascript/discosClass.js"></script>
+      <script src="./javascript/function.js"></script>
+      <script src="./javascript/index.js"></script>
+    </main>
+    <footer>
+      <ul>
+        <li>Profesor Fabrizio Carlassara</li>
+        <li>
+          <a
+            href="mailto:fabrizio.carlassara@davinci.edu.ar?subject=P1%20-%20Consulta%20-%20DW2[M|T|N][A|B]%20-%20Apellido,%20Nombre"
+            target="_blank"
+            >fabrizio.carlassara@davinci.edu.ar</a
+          >
+        </li>
+        <li>Programación I</li>
+      </ul>
+    </footer>
+  </body>
+</html>

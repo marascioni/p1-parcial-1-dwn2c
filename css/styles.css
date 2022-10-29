@@ -1,0 +1,455 @@
+/**
+ * Versión 1.0.0
+ */
+@charset "utf-8";
+
+/**
+ * Fonts
+ */
+@import url("https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap");
+
+/**
+ * Mobile
+ */
+
+/** General */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
+  line-height: 1;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+
+/** Body */
+body {
+  background-color: rgb(57, 3, 57);
+  color: #d0e0e3;
+}
+
+/** Header */
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2em;
+}
+
+/** Encabezados */
+h1 {
+  color: #ffffff;
+  font-family: "Segoe Print";
+  font-size: 3rem;
+  line-height: 1;
+  font-weight: 700;
+  text-align: left;  
+  padding: 5px;
+}
+
+h2 {
+  color: #66014e;
+  font-size: 2.5rem;
+  line-height: 1;
+  font-weight: 700;
+  padding: 5px;
+  text-align: center;
+  font-family: "Segoe Print";
+}
+
+h3 {
+  color: #a00a7d;
+  font-size: 2.3rem;
+  line-height: 1;
+  font-weight: 700;
+  padding: 5px;
+  text-align: center;
+  font-family: "Segoe Print";
+}
+
+h4 {
+  color: #df17b0;
+  line-height: 1;
+  font-weight: 700;
+  text-align: center;
+  font-size: 2.1rem;
+  padding: 5px;
+  margin-bottom: 10px;
+  font-family: "Segoe Print";
+}
+
+h5 {
+  color: #046e86;
+  font-family: "Montserrat";
+  line-height: 1;
+  font-weight: 700;
+  text-align: left;
+  font-size: 1.5rem;
+  padding: 5px;
+  padding-bottom: 10px;
+}
+
+/** Main */
+
+.cajaCargarDisco {
+  border: 2px solid rgb(113, 59, 99);
+  border-radius: 2em;
+  background: #d2d9eb; 
+  display: inline-block;
+  margin: 10px;
+  text-align: left;
+  padding: 10px 20px 10px 20px;
+  width: 26vw;
+  margin-left: calc((100vw - 30vw) / 2);
+  margin-top: calc((100vh - 100vh) / 2);
+}
+
+.cajaCargarDisco p {
+  margin-left: 20px;
+}
+
+.cajaCargarDisco h6,.cajaMostrarDisco h6  {
+  color: #046e86;
+  font-family: "Montserrat";  
+  font-weight:600;
+  text-align: left;
+  font-size: 1.5rem;
+  padding: 3px;
+  margin-left: 30px;  
+}
+
+.cajaCargarDisco img {
+  width: 60px;
+  margin-left: calc((26vw - 100px) / 2);  
+  border-radius: 10px;  
+  box-shadow: 2px 2px 5px purple;
+}
+
+.cajaMostrarDisco {
+  border: 2px solid rgb(182, 109, 242);  
+  border-radius: 2em;
+  background: #ebd2e6;
+  display: inline-block;
+  margin: 10px;
+  padding: 10px;
+  width: 26vw;
+}
+
+.cajaMostrarDisco img {
+  width: 15%;
+  text-align: center;  
+  margin-bottom: 5px;
+}
+
+#info {
+  align-self: center;
+}
+
+.botones {
+  display: inline-block;
+}
+
+#disco1,
+#disco2,
+#disco3 {
+  display: none;
+}
+
+#flechasL, #flechasR{
+max-width: 40%;
+height: auto;
+display: inline-block;
+margin: auto;
+}
+
+.flechas { 
+  align-self: center;
+  display: flex;
+}
+
+.flechas img{
+  display: block;
+}
+
+#arrowL,
+#arrowR {
+  width: 50px;
+  height: auto;
+  display: none; 
+}
+
+#arrowL:hover,
+#arrowR:hover {
+  cursor: pointer;
+}
+
+.estadistica {
+  width: 100%;
+  text-align: center;
+}
+
+#infoDiscos,
+#infoPistas {
+  width: 26vw;
+  display: inline-block;   
+  border-radius: 20px;
+  box-shadow: 4px 4px 7px #f4a4e5;
+  margin-bottom: 10px;  
+  background: hwb(223 78% 4%);    
+  margin-left: 5px;
+  margin-right: 5px;
+}
+#infoDiscos h3,
+#infoPistas h3 {
+  font-size: 2rem;
+  margin-left: 20px;
+  margin-bottom: 10px;
+  color: purple;
+  text-align: left;
+  
+}
+
+#infoDiscos p,
+#infoPistas p {
+  font-size: 1.5rem;
+  margin-left: 40px;  
+  color: rgb(167, 0, 167);
+  line-height: 1rem;
+}
+
+#info{
+  text-align: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 2em 2em;
+  background-color: rgb(245, 245, 196);
+}
+
+span {
+  font-size: 1em;
+  line-height: 1.5;
+  text-align: left;
+  color: red;
+}
+
+main p {
+  font-size: 1.6rem;
+  line-height: 1;
+  text-align: left;
+  color: #0b7070;
+  padding-right: 5px;
+}
+
+.botones {
+  width: 100%;
+  text-align: center;
+}
+
+#discoPortada {
+  width: 700px;
+  margin-left: calc((100vw - 700px) / 2);
+}
+
+main p strong,
+main p em {
+  font-size: 0.5em;
+}
+
+main p strong {
+  font-weight: 700;
+  padding-right: 5px;
+}
+
+main p em {
+  font-style: italic;
+  padding-right: 5px;
+}
+
+main ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-items: flex-start;
+  width: 100%;
+}
+
+main ul li {
+  margin-left: 2em;
+  font-size: 1.6rem;
+  line-height: 1;
+  text-align: left;
+  color: #1a4a5e;
+}
+
+main ul li strong,
+main ul li em {
+  font-size: 1em;
+}
+
+main ul li strong {
+  font-weight: 700;
+}
+
+main ul li em {
+  font-style: italic;
+}
+
+/*BOTONES*/
+main button {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: 10px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 0.5em;
+  padding: 0.25em 0.5em;
+  background: #134f5c;
+  cursor: pointer;
+  font-size: 2em;
+  line-height: 1.5;
+  text-align: center;
+  color: #d0e0e3;
+}
+
+button {
+  display: inline-block;
+}
+
+main div.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1em 0;
+  width: 100%;
+  padding: 1em;
+  background: rgba(19, 79, 92, 0.5);
+}
+
+main div.galeria > img {
+  max-width: 90%;
+  margin: 1em 5%;
+}
+
+main div.galeria > span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 5em;
+  height: 5em;
+}
+
+main div.galeria div {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  width: 90%;
+  padding: 1em;
+}
+
+main div.galeria div img {
+  width: 100%;
+}
+
+main div.galeria div h3 {
+  padding: 0.5em;
+  font-size: 3em;
+  text-align: center;
+  color: #134f5c;
+}
+
+main div.galeria div p {
+  padding: 1em;
+  font-size: 1.6em;
+  text-align: center;
+}
+
+main hr {
+  margin: 1em 0%;
+  width: 100%;
+  height: 0.1em;
+}
+
+/** Footer */
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 2em;
+}
+
+footer ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  list-style: none;
+}
+
+footer ul li {
+  font-family: "Montserrat";
+  font-size: 1.4em;
+  line-height: 1.5;
+  text-align: center;
+}
+
+footer ul li a {
+  font-family: "Montserrat";
+  font-size: 1em;
+  text-decoration: none;
+  color: #d0e0e3;
+}
+
+footer ul li a:hover {
+  color: #a2c4c9;
+}
+
+/** Overs */
+main button:hover {
+  opacity: 0.6;
+}
+
+/******************************************************
+ **********************  WEB **************************
+ ******************************************************/
+@media screen and (min-width: 960px) {
+  /** Main */
+  main div.galeria {
+    flex-direction: row;
+  }
+
+  main div.galeria > img {
+    max-width: 24%;
+    margin: 1em 0.5%;
+  }
+
+  main div.galeria div {
+    align-self: flex-start;
+    width: 30%;
+  }
+
+  /** Footer */
+  footer ul {
+    flex-direction: row;
+  }
+}
